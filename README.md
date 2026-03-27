@@ -37,10 +37,4 @@ A good database never accepts bad data. I used strict rules to protect data qual
 - **Database:** MySQL 
 - **Key Skills:** Database Design, Table Relationships, Triggers, Data Constraints (CHECK, FOREIGN KEY), Data Validation (Regex), SQL Error Handling.
 
-## 💡 Why this makes me a great Data Engineer
-This project shows that I don't just know how to write `SELECT` queries. I know how to:
-1. Design a database that can grow with the business.
-2. Put important safety rules directly into the database so bad data never gets saved.
-3. Automate calculations to make the whole system faster and more reliable.
-
 ![alt text](image.png)
