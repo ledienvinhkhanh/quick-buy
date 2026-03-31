@@ -3,38 +3,58 @@ Semester 251 major assignment of Database system course at HCMUT
 # QuickBuyDB - E-Commerce Database
 
 ## 📌 Project Overview
-**QuickBuyDB** is a complete, ready-to-use relational database built for an online e-commerce store. It manages everything from users and product catalogs to shopping carts, multiple store locations, warehouses, and order tracking.
+In this project, I researched e-commerce systems, contributed to database design, and implemented business logic using SQL. I focused on defining data structures, enforcing constraints, and building triggers to automate core functionalities such as order processing and data validation.
 
-More than just creating tables, this project shows how to use advanced SQL to automate tasks, keep data clean, and enforce business rules directly inside the database.
+
+**QuickBuyDB** is a relational database system designed for an online e-commerce platform. It manages core business operations including users, product catalogs, shopping carts, orders, and inventory across stores and warehouses.
+
+The project focuses on designing a structured database and enforcing business rules directly at the database level using SQL.
 
 ---
 
-## 🚀 Key Highlights for Data Engineering
+## 🚀 Key Highlights
 
-### 1. Smart Database Design (Data Modeling)
-- **29 Connected Tables:** Carefully designed to reflect real-world business needs, including supply chains and customer orders.
-- **Handling Complex Relationships:** Used bridge tables to easily link products to multiple stores, categories, and warehouses without creating duplicate data.
+### 1. Database Design (Data Modeling)
+- Designed a relational database with **29 tables** representing key entities such as users, products, orders, stores, and warehouses  
+- Established relationships between entities using **primary keys and foreign keys** to maintain data consistency  
+- Structured data to support core e-commerce workflows such as product browsing, ordering, and inventory management  
 
-### 2. Built-in Automations (Triggers)
-Instead of relying on backend code to do all the math, the database handles it automatically to ensure 100% accuracy:
-- **Auto-Calculating Totals:** Triggers automatically update the `TotalPrice` and `ItemCount` in shopping carts and orders whenever items are added, updated, or removed.
-- **Loyalty Points System:** Automatically gives customers reward points when their order status changes to 'Completed'.
-- **Auto-Cancellation:** Automatically cancels pending orders if the customer hasn't paid within 24 hours.
+---
 
-### 3. Keeping Data Clean and Safe (Constraints)
-A good database never accepts bad data. I used strict rules to protect data quality:
-- **Regex Password Checking:** Enforces strong passwords (must contain uppercase, numbers, and special characters) directly at the database level.
-- **Smart Data Rules:** Ensures prices are never lower than wholesale costs, time slots make logical sense (End Time > Start Time), and stock levels are never negative.
-- **Real-Time Stock Checking:** Automatically stops an order from processing if a store doesn't have enough items in stock.
+### 2. Automation with Triggers
+- Implemented triggers to **automatically update TotalPrice and ItemCount** in carts and orders when items change  
+- Built a **loyalty points mechanism** that updates customer points when orders are completed  
+- Created logic to **auto-cancel unpaid orders after 24 hours**  
 
-### 4. Ready-to-Test Data
-- The database comes fully loaded with sample stores, users, products, and orders. 
-- You can easily run tests, check how triggers work, and see the database in action right away.
+---
+
+### 3. Data Integrity & Constraints
+- Applied constraints (CHECK, FOREIGN KEY) to ensure **data validity and consistency**  
+- Enforced **business rules** such as:
+  - Prices must not be lower than cost  
+  - Stock quantities cannot be negative  
+  - Time ranges must be valid (End Time > Start Time)  
+- Implemented **input validation (e.g., password format using regex)**  
+
+---
+
+### 4. Testable Dataset
+- Provided sample data including users, products, stores, and orders  
+- Enabled easy testing of triggers, constraints, and business logic  
 
 ---
 
 ## 🛠️ Tech Stack & Skills Used
-- **Database:** MySQL 
-- **Key Skills:** Database Design, Table Relationships, Triggers, Data Constraints (CHECK, FOREIGN KEY), Data Validation (Regex), SQL Error Handling.
+- **Database:** MySQL  
+- **Skills:** Database Design, SQL, Triggers, Constraints (CHECK, FOREIGN KEY), Data Validation, Business Rule Implementation  
 
+---
+
+
+## 📊 Database EERD design
 ![alt text](image.png)
+
+---
+
+## 🎨 UI design using Figma
+![alt text](<QuickBuy UI.png>)
